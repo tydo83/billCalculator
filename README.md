@@ -7,9 +7,7 @@
 
 
 ## App Logic
-> It has a really simple calculator. First, the user is asked to input the price of which they ordered. Second, the user is asked to type the state since tax rate is different. Third, at last, the user is asked what percentage of the tip they want to pay.  
+> It is a really simple calculator. First, the user is asked to input the price of which they ordered. Second, the user is asked to type the state since tax rate is different. Third, at last, the user is asked what percentage of the tip they want to pay.  
 
 ## Stretch Goals
-> Instead of that user enters the total of what they ordered, I can allow user to input separate items as many as they want since it may be a hassle to calculate the total. 
-
-
+> Instead of that user enters the total of what they ordered, I can allow user to input separate items as many as they want since it may be a hassle to calculate the total by themselves. 
