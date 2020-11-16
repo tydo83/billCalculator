@@ -13,19 +13,23 @@ let tax = 0;
 let tip = 0;
 
 const priceFunction = function(price) {
-    cost += price;
-    console.log('Step2. Type the city where you ate:');
-    interface.question(`(right now, we only support NY and NJ area)\n`, taxCal)
+    cost += Number(price);
+    interface.question(`Is this all you had? (type Yes or No):\n`, isThisAll)
 }
 
-// const isThisAll = function(answer) {
-//     if(answer.toLowerCase() = yes)
-// }
+const isThisAll = function(answer) {
+    if(answer.toLowerCase() == 'yes') {
+        console.log('Step2. Type the city where you ate:');
+        interface.question(`(right now, we only support NY and NJ area)\n`, taxCal)
+    } else {
+        interface.question(`Enter the price of other dishes:\n`, priceFunction);
+    }
+}
 
 const taxCal = function(state) {
-    if(state === 'NY') {
+    if(state.toUpperCase() === 'NY') {
         tax = cost * 0.0875;
-    } else if(state === 'NJ') {
+    } else if(state.toUpperCase() === 'NJ') {
         tax = cost * 0.06625;
     } else {
         interface.question('Type only NY or NJ:\n', taxCal)
@@ -36,7 +40,7 @@ const taxCal = function(state) {
 const tipCal = function(tipPercent) {
     tip = (cost + tax) * (tipPercent / 1000);
     console.log('You have to venmo:')
-    console.log(Number(cost) + Number(tax) + Number(tip));
+    console.log('$' + (Number(cost) + Number(tax) + Number(tip)).toFixed(2));
     interface.close();
 }
 
