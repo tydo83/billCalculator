@@ -39,8 +39,10 @@ const taxCal = function(state) {
 
 const tipCal = function(tipPercent) {
     tip = (cost + tax) * (tipPercent / 1000);
+    console.log(`*****************************`);
     console.log('You have to venmo:')
     console.log('$' + (Number(cost) + Number(tax) + Number(tip)).toFixed(2));
+    console.log(`*****************************`);
     interface.close();
 }
 
